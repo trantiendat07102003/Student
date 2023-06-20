@@ -37,7 +37,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void inSert(List<Student> students) {
+    public void inSert(List<? extends Student> students) {
 
         for (int i = 0;; i++) {
             if (this.getFullName().equals("")) {
@@ -51,7 +51,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void disPlay(List<Student> students) {
+    public void disPlay(List<? extends Student> students) {
 
         for (int i = 0; i < students.size(); i++) {
             System.out.printf("[Ho Ten: %s | Nam Sinh: %d | Diem: %.2f | Ma So: %l]",
@@ -61,7 +61,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void search(List<Student> students, String name) {
+    public void search(List<? extends Student> students, String name) {
 
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
@@ -78,7 +78,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void upDate(List<Student> students, String name) {
+    public void upDate(List<? extends Student> students, String name) {
         
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
@@ -96,7 +96,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void reMove(List<Student> students, String name) {
+    public void reMove(List<? extends Student> students, String name) {
         
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
