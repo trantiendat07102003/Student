@@ -50,14 +50,14 @@ public abstract class Student {
 
     public abstract void inPut();
 
-    public abstract void inSert(List<? extends Student> students);
+    public abstract void inSert(List<? super MethodImplementation> students);
 
-    public abstract void disPlay(List<? extends Student> students);
+    public abstract void disPlay(List<? super MethodImplementation> students);
 
-    public abstract void search(List<? extends Student> students, String name);
+    public abstract void search(List<? super MethodImplementation> students, String name);
 
-    public abstract void upDate(List<? extends Student> students, String name);
+    public abstract void upDate(List<? super MethodImplementation> students, String name);
 
-    public abstract void reMove(List<? extends Student> students, String name);
+    public abstract void reMove(List<? super MethodImplementation> students, String name);
 
 }

@@ -24,6 +24,9 @@ public class MethodImplementation extends Student {
         System.out.println("Nhap ho va ten:");
         fullName = scanner.nextLine();
         this.setFullName(fullName);
+        if (this.getFullName().equals("")) {
+            return;
+        }
         System.out.println("Nhap nam sinh:");
         born = scanner.nextInt();
         this.setBorn(born);
@@ -37,11 +40,11 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void inSert(List<? extends Student> students) {
+    public void inSert(List<? super MethodImplementation> students) {
 
         for (int i = 0;; i++) {
             if (this.getFullName().equals("")) {
-                break;
+                return;
             } else {
                 MethodImplementation methodImplementation = new MethodImplementation();
                 methodImplementation.inPut();
@@ -51,7 +54,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void disPlay(List<? extends Student> students) {
+    public void disPlay(List<? super MethodImplementation> students) {
 
         for (int i = 0; i < students.size(); i++) {
             System.out.printf("[Ho Ten: %s | Nam Sinh: %d | Diem: %.2f | Ma So: %l]",
@@ -61,7 +64,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void search(List<? extends Student> students, String name) {
+    public void search(List<? super MethodImplementation> students, String name) {
 
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
@@ -78,7 +81,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void upDate(List<? extends Student> students, String name) {
+    public void upDate(List<? super MethodImplementation> students, String name) {
         
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
@@ -96,7 +99,7 @@ public class MethodImplementation extends Student {
     }
 
     @Override
-    public void reMove(List<? extends Student> students, String name) {
+    public void reMove(List<? super MethodImplementation> students, String name) {
         
         boolean check = false;
         for (int i = 0; i < students.size(); i++) {
